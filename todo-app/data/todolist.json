@@ -1,20 +1,24 @@
 {
-    "tasks": [
-        {
-        "id": 1,
-        "text": "Buy groceries"
-        },
-        {
-        "id": 2,
-        "text": "Finish report"
-        },
-        {
-        "id": 3,
-        "text": "Go to the gym"
-        },
-        {
-        "id": 4,
-        "text": "Call John"
-        }
-    ]
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Dinnar with Emma Watson",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "text": "Go to the gym",
+      "completed": false
+    },
+    {
+      "id": 4,
+      "text": "Call Thor",
+      "completed": false
+    },
+    {
+      "id": "1a7b41c4-cd6a-4336-a9a3-34570456cdda",
+      "text": "New task didn't complete",
+      "completed": false
     }
+  ]
+}
