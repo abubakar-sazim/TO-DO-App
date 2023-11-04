@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "server": "npx json-server --watch data/todolist.json --port 8000"
   },
   "dependencies": {
     "@mantine/core": "^7.1.7",
