@@ -4,11 +4,13 @@ interface CheckStateProps {
     taskId: string;
 }
 
+const baseUrl = 'http://localhost:8000';
+
 const CheckState: React.FC<CheckStateProps> = ({ taskId }) => {
     const [isChecked, setIsChecked] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:8000/tasks/${taskId}`)
+        fetch(`${baseUrl}/tasks/${taskId}`)
         .then((response) => response.json())
         .then((data) => {
             setIsChecked(data.completed);
@@ -20,7 +22,7 @@ const CheckState: React.FC<CheckStateProps> = ({ taskId }) => {
 
     const toggleCheckbox = () => {
         const updatedCheckedState = !isChecked;
-        fetch(`http://localhost:8000/tasks/${taskId}`, {
+        fetch(`${baseUrl}/tasks/${taskId}`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json",
