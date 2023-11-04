@@ -6,12 +6,9 @@ interface TodoListProps {
     }
 
 const TodoList: React.FC<TodoListProps> = ({ tasks }) => {
-    // const tasks = await GetTasks()
-    // console.log(tasks)
     return (
         <div className="overflow-x-auto">
             <table className="table">
-            {/* head */}
             <thead>
                 <tr>
                 <th>Tasks</th>

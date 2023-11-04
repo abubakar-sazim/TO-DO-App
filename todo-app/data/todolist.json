@@ -2,7 +2,7 @@
   "tasks": [
     {
       "id": 1,
-      "text": "Dinnar with Emma Watson",
+      "text": "Dinner with Emma Watson",
       "completed": false
     },
     {
@@ -16,9 +16,9 @@
       "completed": false
     },
     {
-      "id": "1a7b41c4-cd6a-4336-a9a3-34570456cdda",
-      "text": "New task didn't complete",
-      "completed": false
+      "id": "9dd5a372-658b-4c3d-8620-4b99be907d63",
+      "text": "Check the state functionality of this todo app",
+      "completed": true
     }
   ]
 }
