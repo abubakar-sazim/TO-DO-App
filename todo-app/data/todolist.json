@@ -2,7 +2,7 @@
   "tasks": [
     {
       "id": 1,
-      "text": "Dinner with Emma Watson",
+      "text": "Dinner with",
       "completed": false
     },
     {
@@ -24,6 +24,11 @@
       "id": "9328ae76-befc-4177-be7a-bcb8388f40a0",
       "text": "check feature branch 2",
       "completed": true
+    },
+    {
+      "id": "36feda88-be26-4e96-84fc-c009394e4131",
+      "text": "Watch BD cricket match",
+      "completed": false
     }
   ]
 }
