@@ -13,7 +13,7 @@
     {
       "id": 4,
       "text": "Call Thor",
-      "completed": false
+      "completed": true
     },
     {
       "id": "9dd5a372-658b-4c3d-8620-4b99be907d63",
@@ -24,6 +24,11 @@
       "id": "9328ae76-befc-4177-be7a-bcb8388f40a0",
       "text": "check feature branch 2",
       "completed": true
+    },
+    {
+      "id": "dce466e2-94ef-435b-b96d-0353d3c87532",
+      "text": "check drag feature",
+      "completed": false
     }
   ]
 }

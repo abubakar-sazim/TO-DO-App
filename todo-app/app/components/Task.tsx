@@ -10,7 +10,7 @@ import { deleteTodo, editTodo } from "@/api";
 import CheckState from "./CheckState";
 
 interface TaskProps {
-  task: ToDoTask;
+    task: ToDoTask;
 }
 
 const Task: React.FC<TaskProps> = ({ task }) => {

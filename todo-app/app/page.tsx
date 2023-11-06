@@ -15,8 +15,6 @@ export default async function Home() {
           <div>
           <ToDoList tasks={tasks} />
           </div>
-          <div>
-          </div>
         </div>
       </main>
   )
