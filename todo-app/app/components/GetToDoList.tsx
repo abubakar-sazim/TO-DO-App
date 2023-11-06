@@ -8,20 +8,14 @@ interface TodoListProps {
 const TodoList: React.FC<TodoListProps> = ({ tasks }) => {
     return (
         <div className="overflow-x-auto">
-            <table className="table">
-            <thead>
-                <tr>
-                <th>Tasks</th>
-                <th>Actions</th>
-                <th>State</th>
-                </tr>
-            </thead>
-            <tbody>
-                {tasks.map((task) => (
+            {tasks.map((task, index) => (
+            <div className="" key={index} draggable>
                 <Task key={task.id} task={task} />
-                ))}
-            </tbody>
-            </table>
+            </div>
+            
+            ))}
+            
+            
             </div>
     );
 }
