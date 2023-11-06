@@ -19,6 +19,11 @@
       "id": "9dd5a372-658b-4c3d-8620-4b99be907d63",
       "text": "Check the state functionality of this todo app",
       "completed": true
+    },
+    {
+      "id": "9328ae76-befc-4177-be7a-bcb8388f40a0",
+      "text": "check feature branch 2",
+      "completed": true
     }
   ]
 }
