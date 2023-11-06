@@ -10,7 +10,7 @@ import { deleteTodo, editTodo } from "@/api";
 import CheckState from "./CheckState";
 
 interface TaskProps {
-  task: ToDoTask;
+    task: ToDoTask;
 }
 
 const Task: React.FC<TaskProps> = ({ task }) => {
@@ -22,9 +22,9 @@ const Task: React.FC<TaskProps> = ({ task }) => {
     const handleSubmitEditTodo: FormEventHandler<HTMLFormElement> = async (e) => {
         e.preventDefault();
         await editTodo({
-        id: task.id,
-        text: taskToEdit,
-        completed: task.completed,
+            id: task.id,
+            text: taskToEdit,
+            completed: task.completed,
         });
         setOpenModalEdit(false);
         router.refresh();
@@ -38,51 +38,51 @@ const Task: React.FC<TaskProps> = ({ task }) => {
 
     return (
         <tr key={task.id}>
-        <td className="w-full">{task.text}</td>
-        <td className="flex gap-5">
-            <AiOutlineEdit
-            onClick={() => setOpenModalEdit(true)}
-            cursor="pointer"
-            className="text-blue-300"
-            size={20}
-            />
-            <Modal modalOpen={openModalEdit} setModalOpen={setOpenModalEdit}>
-            <form onSubmit={handleSubmitEditTodo}>
-                <h3 className="font-bold text-lg">Edit task</h3>
-                <div className="modal-action">
-                <input
-                    value={taskToEdit}
-                    onChange={(e) => setTaskToEdit(e.target.value)}
-                    type="text"
-                    placeholder="Type here"
-                    className="input input-bordered w-full"
+            <td className="w-full">{task.text}</td>
+            <td className="flex gap-5">
+                <AiOutlineEdit
+                    onClick={() => setOpenModalEdit(true)}
+                    cursor="pointer"
+                    className="text-blue-300"
+                    size={20}
                 />
-                <button type="submit" className="btn">
-                    Submit
-                </button>
-                </div>
-            </form>
-            </Modal>
-            <MdDeleteForever
-            onClick={() => setOpenModalDeleted(true)}
-            cursor="pointer"
-            className="text-red-400"
-            size={20}
-            />
-            <Modal modalOpen={openModalDeleted} setModalOpen={setOpenModalDeleted}>
-            <h3 className="text-lg">
-                Are you sure, you want to delete this task?
-            </h3>
-            <div className="modal-action">
-                <button onClick={() => handleDeleteTask(task.id)} className="btn">
-                Yes
-                </button>
-            </div>
-            </Modal>
-        </td>
-        <td>
-            <CheckState taskId={task.id} />
-        </td>
+                <Modal modalOpen={openModalEdit} setModalOpen={setOpenModalEdit}>
+                    <form onSubmit={handleSubmitEditTodo}>
+                        <h3 className="font-bold text-lg">Edit task</h3>
+                        <div className="modal-action">
+                            <input
+                                value={taskToEdit}
+                                onChange={(e) => setTaskToEdit(e.target.value)}
+                                type="text"
+                                placeholder="Type here"
+                                className="input input-bordered w-full"
+                            />
+                            <button type="submit" className="btn">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </Modal>
+                <MdDeleteForever
+                    onClick={() => setOpenModalDeleted(true)}
+                    cursor="pointer"
+                    className="text-red-400"
+                    size={20}
+                />
+                <Modal modalOpen={openModalDeleted} setModalOpen={setOpenModalDeleted}>
+                    <h3 className="text-lg">
+                        Are you sure, you want to delete this task?
+                    </h3>
+                    <div className="modal-action">
+                        <button onClick={() => handleDeleteTask(task.id)} className="btn">
+                            Yes
+                        </button>
+                    </div>
+                </Modal>
+            </td>
+            <td>
+                <CheckState taskId={task.id} />
+            </td>
         </tr>
     );
 };
