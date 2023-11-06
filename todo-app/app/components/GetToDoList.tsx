@@ -1,33 +1,29 @@
-async function GetTasks() {
-    const res = await fetch("http://localhost:8000/tasks", {
-        next: {
-        revalidate: 0, // use 0 to opt out of using cache
-        },
-    });
+import { ToDoTask } from "@/types/task";
+import Task from "./Task";
 
-    return res.json();
-}
+interface TodoListProps {
+    tasks: ToDoTask[];
+    }
 
-export default async function ToDoList() {
-    const tasks = await GetTasks();
+const TodoList: React.FC<TodoListProps> = ({ tasks }) => {
     return (
         <div className="overflow-x-auto">
-        <table className="table">
+            <table className="table">
             <thead>
-            <tr>
+                <tr>
                 <th>Tasks</th>
                 <th>Actions</th>
-            </tr>
+                <th>State</th>
+                </tr>
             </thead>
             <tbody>
-            {tasks.map((todotask) => (
-                <tr key={todotask.id}>
-                <td>{todotask.text}</td>
-                <td>Pending</td>
-                </tr>
-            ))}
+                {tasks.map((task) => (
+                <Task key={task.id} task={task} />
+                ))}
             </tbody>
-        </table>
-        </div>
+            </table>
+            </div>
     );
 }
+
+export default TodoList;

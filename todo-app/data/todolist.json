@@ -1,20 +1,24 @@
 {
-    "tasks": [
-        {
-        "id": 1,
-        "text": "Buy groceries"
-        },
-        {
-        "id": 2,
-        "text": "Finish report"
-        },
-        {
-        "id": 3,
-        "text": "Go to the gym"
-        },
-        {
-        "id": 4,
-        "text": "Call John"
-        }
-    ]
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Dinner with Emma Watson",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "text": "Go to the gym",
+      "completed": false
+    },
+    {
+      "id": 4,
+      "text": "Call Thor",
+      "completed": false
+    },
+    {
+      "id": "9dd5a372-658b-4c3d-8620-4b99be907d63",
+      "text": "Check the state functionality of this todo app",
+      "completed": true
     }
+  ]
+}
