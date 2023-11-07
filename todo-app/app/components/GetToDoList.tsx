@@ -1,12 +1,12 @@
 "use client";
 
 import { ToDoTask } from "@/types/task";
-import Task from "./Task";
 import React from "react";
+import Task from "./Task";
 
 interface TodoListProps {
-    tasks: ToDoTask[];
-    }
+  tasks: ToDoTask[];
+}
 
 const TodoList: React.FC<TodoListProps> = ({ tasks }) => {
   const [todotasks, setTodoTasks] = React.useState([tasks]);
