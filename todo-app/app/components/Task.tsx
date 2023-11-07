@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react';
 import { ToDoTask } from "@/types/task";
 import { FormEventHandler, useState } from "react";
 import { AiOutlineEdit } from "react-icons/ai";
@@ -10,7 +11,7 @@ import { deleteTodo, editTodo } from "@/api";
 import CheckState from "./CheckState";
 
 interface TaskProps {
-  task: ToDoTask;
+    task: ToDoTask;
 }
 
 const Task: React.FC<TaskProps> = ({ task }) => {

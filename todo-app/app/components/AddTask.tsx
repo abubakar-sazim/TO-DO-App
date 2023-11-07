@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react';
 import { AiOutlinePlus } from "react-icons/ai";
 import Modal from "./Modal";
 import { FormEventHandler, useState } from "react";

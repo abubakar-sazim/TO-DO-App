@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { ToDoTask } from "@/types/task";
@@ -14,7 +15,7 @@ const TodoList: React.FC<TodoListProps> = ({ tasks }) => {
   const dragOverItem = React.useRef<any>(null);
 
   const handleSort = () => {
-    let _todotasks = [...todotasks];
+    const _todotasks = [...todotasks];
     const draggedItemContent = _todotasks[0].splice(dragItem.current, 1)[0];
     _todotasks[0].splice(dragOverItem.current, 0, draggedItemContent);
 
@@ -30,8 +31,8 @@ const TodoList: React.FC<TodoListProps> = ({ tasks }) => {
           className="font-bold text-lg border-spacing-3 border-s-success-content"
           key={index}
           draggable
-          onDragStart={(e) => (dragItem.current = index)}
-          onDragEnter={(e) => (dragOverItem.current = index)}
+          onDragStart={() => (dragItem.current = index)}
+          onDragEnter={() => (dragOverItem.current = index)}
           onDragEnd={handleSort}
           onDragOver={(e) => e.preventDefault()}
         >
