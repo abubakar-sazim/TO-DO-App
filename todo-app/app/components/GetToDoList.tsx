@@ -8,29 +8,6 @@ interface TodoListProps {
   tasks: ToDoTask[];
 }
 
-// const updateJsonFile = async(data) => {
-//   const updatedJson = JSON.stringify(data);
-//   const URL = "http://localhost:8000";
-
-//   await fetch(URL, {
-//     method: "PUT",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: updatedJson,
-//   })
-//     .then((response) => {
-//       if (response.ok) {
-//         console.log("JSON file updated successfully.");
-//       } else {
-//         console.error("Failed to update JSON file.");
-//       }
-//     })
-//     .catch((error) => {
-//       console.error("Error updating JSON file:", error);
-//     });
-// };
-
 const TodoList: React.FC<TodoListProps> = ({ tasks }) => {
   const [todotasks, setTodoTasks] = React.useState([tasks]);
   const dragItem = React.useRef<any>(null);
