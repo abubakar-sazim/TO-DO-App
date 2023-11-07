@@ -44,5 +44,3 @@ await fetch(`${baseUrl}/tasks/${id}`, {
     method: 'DELETE',
 })
 }
-
-// Update State
